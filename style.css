@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --black: #000000;
+    --darkgreen: #1A4D2E;
+    --golden: #FF9F29;
+    --off-white: #faf3e3;
+}
+body {
+    background: var(--off-white);
+}
+/*-----header & nav-----*/
+header {
+    background: var(--black);
+    height: 4.5rem;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div {
+    background: #000000;
+}
+#title {
+    font-size: 2rem;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+nav {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+}
+
+.nav-item {
+    padding: 3px;
+}
+.nav-item a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.nav-item:hover {
+    border: 1px dashed goldenrod;
+    border-radius: 2px;
+}
+.nav-item a:hover {
+    text-decoration: none;
+    color: rgb(1, 125, 1);
+    /* font-size: larger; */
+    /* text-transform: uppercase; */
+    font-style: bold;
+    transition: all;
+}
+.nav-item:first-child {
+    font-weight: bold;
+}
+/*-----Create User Form-----*/
+.main h1 {
+    margin: 1rem 0 0 1rem;
+}
+#form {
+    width: 40vw;
+    margin: auto;
+    border: 2px solid var(--darkgreen);
+    border-radius: .5rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#form,.card--item {
+    box-shadow: 1px 1px 1px grey;
+}
+h2 {
+    margin: 1rem 0 1rem 1rem;
+}
+ .form--item {
+    display: flex;
+    justify-content: space-around;
+    margin: .5rem 0 .5rem 0;
+ }
+
+.text-box {
+    padding-left: 3px;
+} 
+::placeholder {
+    color: var(--darkgreen);
+    margin-left: 1rem;
+}
+
+ .form--item label {
+    font-weight: bold;
+ }
+
+ .form--item> input, select {
+    width: 60%;
+ }
+
+
+.buttons {
+    justify-content: center;
+    height: 25px;
+    width: auto;
+}
+
+#clear {
+    background: var(--off-white);
+}
+
+#save {
+    background: var(--golden);
+ }
+/*-----card section-----*/
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
+.card--item {
+    background: white;
+    border: 1px solid var(--darkgreen);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 1rem;
+    flex: 0 0 Calc(33% - 3rem);
+    margin: 1rem;
+}
+.card--item:hover {
+    background: #FF9F29;
+    box-shadow: 1px 1px 2px rgb(62, 62, 62);
+    transition: all .7s;
+}
+.card--item h3 {
+    padding-bottom: 1rem;
+}
+
+/*-----media queries-----*/
+
+@media (max-width: 600px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 10rem;
+        padding-bottom: 1rem;
+    }
+    #title {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .nav-item {
+        font-size: larger;
+        background: #000000; 
+        margin: 0;
+        width: 100vw;
+        padding: .8rem;
+    }
+    .main {
+        position:absolute;
+        top: 25%;
+    }
+    #form {
+        width: 90vw;
+    }
+    #form> h2, .form--item {
+        margin: .5rem;
+    }
+    .form--item {
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .form--item>input, select {
+        width: 100%;
+    }
+    .form--item label,select {
+        margin-bottom: .5rem;
+    }
+    .buttons {
+        margin-bottom: 1rem;
+        height: 3rem;
+    }
+    button {
+        height: 3rem;
+    }
+    input {
+        border: none;
+    }
+
+}
+
+@media (max-width: 700px){
+    #cards {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .card--item {
+        background: white;
+        border: 1px solid var(--darkgreen);
+        border-radius: .5rem;
+        text-align: center;
+        padding: 1rem;
+        flex: 0 0 Calc(33% - 3rem);
+        margin: 1rem;
+    }
+}
